@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+  <head>
+    <producer>jp.co.anotherbrain.sdlwithrobohon</producer>
+    <description>キンコーン</description>
+    <scene value="jp.co.anotherbrain.sdlwithrobohon.scene01"/>
+    <version value="1.0"/>
+    <accost priority="70" topic_id="say" word="jp.co.anotherbrain.sdlwithrobohon.kinkon.say"/>
+  </head>
+  <body>
+    <topic id="say" listen="false">
+      <action index="1">
+        <speech><emotion type="happiness" level="4">キンコン</emotion></speech>
+        <behavior type="normal" id="0x06000e" />
+      </action>
+    </topic>
+  </body>
+</hvml>

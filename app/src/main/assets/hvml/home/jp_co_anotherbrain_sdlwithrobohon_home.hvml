@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+  <head>
+    <producer>jp.co.anotherbrain.sdlwithrobohon</producer>
+    <description>テンプレートのホーム起動シナリオ</description>
+    <scene value="home"/>
+    <version value="1.0"/>
+    <situation priority="78" topic_id="start" trigger="user-word">${Local:WORD_APPLICATION} eq どらいぶもーど</situation>
+    <situation priority="78" topic_id="start" trigger="user-word">${Local:WORD_APPLICATION_FREEWORD} eq どらいぶもーどかいし</situation>
+  </head>
+  <body>
+    <topic id="start" listen="false">
+      <action index="1">
+        <speech>${resolver:speech_ok(${resolver:ok_id})}</speech>
+        <behavior id="${resolver:motion_ok(${resolver:ok_id})}" type="normal"/>
+      </action>
+      <action index="2">
+        <speech>ドライブモードを起動するね</speech>
+        <behavior id="assign" type="normal"/>
+        <control function="start_activity" target="home">
+          <data key="package_name" value="jp.co.anotherbrain.sdlwithrobohon"/>
+          <data key="class_name" value="jp.co.anotherbrain.sdlwithrobohon.MainActivity"/>
+        </control>
+      </action>
+    </topic>
+  </body>
+</hvml>

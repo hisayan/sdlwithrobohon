@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+  <head>
+    <producer>jp.co.anotherbrain.sdlwithrobohon</producer>
+    <!-- TODO このシナリオの説明文を入力してください(プログラムに影響はありません) -->
+    <description>テンプレートシナリオ</description>
+    <scene value="jp.co.anotherbrain.sdlwithrobohon.scene01"/>
+    <version value="1.0"/>
+    <situation priority="75" topic_id="reply" trigger="user-word">${Lvcsr:Basic} include [おはよう,こんにちは,こんばんは]</situation>
+    <accost priority="75" topic_id="say" word="jp.co.anotherbrain.sdlwithrobohon.hello.say"/>
+  </head>
+  <body>
+    <topic id="say" listen="false">
+      <action index="1">
+        <speech>こんにちは！僕、ロボホン。おはようとか、こんにちはとか話しかけてみてね</speech>
+        <behavior id="assign" type="normal" />
+      </action>
+    </topic>
+    <topic id="reply" listen="false">
+      <action index="1">
+        <speech>お話してくれて、ありがとう！これから、僕にいろんなことを教えてね！！</speech>
+        <behavior id="assign" type="normal" />
+      </action>
+    </topic>
+  </body>
+</hvml>

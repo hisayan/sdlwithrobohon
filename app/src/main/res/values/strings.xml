@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ドライブモード</string>
+    <string name="action_settings">設定</string>
+    <string name="title_activity_settings">設定</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title_connect_type">接続方法</string>
+    <string-array name="pref_connect_type_list_values">
+        <item>TCPIP</item>
+        <item>USB</item>
+        <item>Bluetooth</item>
+    </string-array>
+    <string-array name="pref_connect_type_list_titles">
+        <item>TCP/IP</item>
+        <item>USB (n/a)</item>
+        <item>Bluetooth (n/a)</item>
+    </string-array>
+
+    <string name="pref_title_connect_uri">接続先アドレス</string>
+
+    <string name="pref_title_connect_port">接続ポート</string>
+
+    <string name="pref_key_restart_button">RESTART_BUTTON</string>
+    <string name="pref_title_restart_button">アプリ再起動</string>
+
+</resources>

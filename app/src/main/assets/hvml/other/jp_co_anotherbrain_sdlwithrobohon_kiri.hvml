@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+  <head>
+    <producer>jp.co.anotherbrain.sdlwithrobohon</producer>
+    <description>キリ番（ゾロ目）</description>
+    <scene value="jp.co.anotherbrain.sdlwithrobohon.scene01"/>
+    <version value="1.0"/>
+    <accost priority="75" topic_id="say" word="jp.co.anotherbrain.sdlwithrobohon.kiri.say"/>
+  </head>
+  <body>
+    <topic id="say" listen="false">
+      <action index="1">
+        <speech><emotion type="happiness" level="4">やったー！走行距離が、オールセブンだよ。なにかいいことあるかなぁ。</emotion></speech>
+        <behavior type="normal" id="0x06000e" />
+      </action>
+    </topic>
+  </body>
+</hvml>

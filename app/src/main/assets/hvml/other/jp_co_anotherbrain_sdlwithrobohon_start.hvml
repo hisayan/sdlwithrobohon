@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+  <head>
+    <producer>jp.co.anotherbrain.sdlwithrobohon</producer>
+    <description>バックします</description>
+    <scene value="jp.co.anotherbrain.sdlwithrobohon.scene01"/>
+    <version value="1.0"/>
+    <accost priority="75" topic_id="say" word="jp.co.anotherbrain.sdlwithrobohon.start.say"/>
+  </head>
+  <body>
+    <topic id="say" listen="false">
+      <action index="1">
+        <speech>よーし、出発進行</speech>
+        <behavior type="normal" id="assign" />
+      </action>
+    </topic>
+  </body>
+</hvml>

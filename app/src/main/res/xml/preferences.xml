@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="TCPIP"
+        android:entries="@array/pref_connect_type_list_titles"
+        android:entryValues="@array/pref_connect_type_list_values"
+        android:key="connect_type"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_connect_type" />
+
+
+    <EditTextPreference
+        android:defaultValue="m.sdl.tools"
+        android:inputType="textUri"
+        android:key="connect_uri"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_connect_uri" />
+
+    <EditTextPreference
+        android:defaultValue="12345"
+        android:numeric="integer"
+        android:key="connect_port"
+        android:maxLines="1"
+        android:maxLength="5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_connect_port" />
+
+    <Preference android:title="@string/pref_title_restart_button"
+        android:key="@string/pref_key_restart_button"
+        android:summary="ドライブモードアプリを再起動し、設定を反映します"/>
+
+</PreferenceScreen>

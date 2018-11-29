@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<hvml version="2.0">
+  <head>
+    <producer>jp.co.anotherbrain.sdlwithrobohon</producer>
+    <description>アプリを終了するためのシナリオ</description>
+    <scene value="jp.co.anotherbrain.sdlwithrobohon.scene_common"/>
+    <version value="1.0"/>
+    <situation priority="61" topic_id="accept" trigger="user-word">ドライブモード in ${Lvcsr:Basic} and ${Lvcsr:Basic} include [終了,終わ]</situation>
+    <accost priority="74" topic_id="execute" word="jp.co.anotherbrain.sdlwithrobohon.app_end.execute"/>
+  </head>
+  <body>
+    <topic id="accept" listen="false">
+      <action index="1">
+        <speech>${resolver:speech_ok(${resolver:ok_id})}</speech>
+        <behavior id="${resolver:motion_ok(${resolver:ok_id})}" type="normal"/>
+      </action>
+      <next href="#execute" type="default"/>
+    </topic>
+    <topic id="execute" listen="false">
+      <action index="1">
+        <speech>ドライブモードを終了するね</speech>
+        <behavior id="assign" type="normal"/>
+        <control function="end_app" target="jp.co.anotherbrain.sdlwithrobohon"/>
+      </action>
+    </topic>
+  </body>
+</hvml>
