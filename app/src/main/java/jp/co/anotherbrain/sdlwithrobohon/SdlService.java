@@ -183,7 +183,7 @@ public class SdlService extends Service {
                     });
 
 
-                    // getVehicleData
+                    // SubscribeVehicleData
                     sdlManager.addOnRPCNotificationListener(FunctionID.ON_VEHICLE_DATA, new OnRPCNotificationListener() {
                         @Override
                         public void onNotified(RPCNotification notification) {
@@ -213,7 +213,7 @@ public class SdlService extends Service {
                                 Log.i("SdlService", "Odometeer was updated to: " + speed);
                                 if (odometeer == 77777 ) {
                                     Log.i("SdlService", "77777");
-                                    // キンコーン
+                                    // キリ番
                                     broadcastSDLEvent(MainActivity.SDLEvents.KIRI_77777);
                                 }
                             }
@@ -232,11 +232,10 @@ public class SdlService extends Service {
                                 }
                             }
 
-                            // ワイパー
+                            // ガソリン量
                             ComponentVolumeStatus fuelLevelState = onVehicleDataNotification.getFuelLevelState();
                             if (fuelLevelState != null) {
-                                Log.i("SdlService", "fuelLevel status was updated to: " + fuelLevelState);
-                                // TODO: OFF から ON になったときだけ イベント発生させるか検討
+                                Log.i("SdlService", "fuelLevel status was updated to: " + fuelLevelState);                                // TODO: OFF から ON になったときだけ イベント発生させるか検討
                                 if (fuelLevelState.equals(ComponentVolumeStatus.LOW)) {
                                     broadcastSDLEvent(MainActivity.SDLEvents.FUEL);
                                 }
